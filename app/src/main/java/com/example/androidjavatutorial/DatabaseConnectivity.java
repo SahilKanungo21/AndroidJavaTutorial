@@ -54,7 +54,7 @@ public class DatabaseConnectivity extends SQLiteOpenHelper {
         Cursor userExists = db
                 .rawQuery("select * from users where username = ? and password = ?",params);
 
-        return userExists.moveToFirst()?true:false;
+        return userExists.moveToFirst();
 
     }
 }
