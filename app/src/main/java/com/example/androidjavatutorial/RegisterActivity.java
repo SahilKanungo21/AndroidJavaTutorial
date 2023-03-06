@@ -36,10 +36,14 @@ public class RegisterActivity extends AppCompatActivity {
             String userEmail = edUserEmail.getText().toString();
             String userPassword = edUserPassword.getText().toString();
             String userConfirmPassword = edConfirmPassword.getText().toString();
+            DatabaseConnectivity db = new DatabaseConnectivity(getApplicationContext(),
+                    "healthcare",null,1);
+
 
             if(!userName.isEmpty() && !userEmail.isEmpty() &&
                     !userPassword.isEmpty() && !userConfirmPassword.isEmpty()) {
                 if(userPassword.equals(userConfirmPassword)){
+                    db.register(userName,userEmail,userPassword);
                     Toast.makeText(getApplicationContext(),"Successfully Register",
                             Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
