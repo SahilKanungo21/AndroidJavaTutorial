@@ -12,6 +12,15 @@
         android:theme="@style/Theme.AndroidJavaTutorial"
         tools:targetApi="31">
         <activity
+            android:name=".LabTest"
+            android:exported="false" />
+        <activity
+            android:name=".BuyMedicine"
+            android:exported="false" />
+        <activity
+            android:name=".FindDoctor"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
